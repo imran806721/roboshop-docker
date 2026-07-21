@@ -3,7 +3,7 @@ services:
   mongodb:
     build: ./mongodb
     image: imranjoindevops/mongodb:4.0.0 # docker build -t imranjoindevops/mongodb:4.0.0
-    container_name: mongodb # docker run -d --network roboshop joindevops/mongodb:4.0.0
+    container_name: mongodb # docker run -d --network roboshop imranjoindevops/mongodb:4.0.0
     volumes:
     - mongodb:/data/db # mongodb stores data in /data/db directory
   catalogue:
