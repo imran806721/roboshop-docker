@@ -65,3 +65,4 @@ networks:
 volumes:
   mongodb:
   redis:
+  mysql:
