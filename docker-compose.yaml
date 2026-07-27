@@ -20,8 +20,6 @@ services:
     - "80:80"
     depends_on:
     - catalogue
-    - user
-    - cart
   # user:
   #   build: ./user
   #   image: imranjoindevops/user:4.0.0
