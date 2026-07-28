@@ -103,4 +103,4 @@ volumes:
   mongodb:
   redis:
   mysql:
-  rabitmq:
+  rabbitmq:
