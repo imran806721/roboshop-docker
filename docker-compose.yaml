@@ -22,6 +22,8 @@ services:
     - catalogue
     - user
     - cart
+    - shipping
+    - payment
   user:
     build: ./user
     image: imranjoindevops/user:v1
@@ -101,3 +103,4 @@ volumes:
   mongodb:
   redis:
   mysql:
+  rabitmq:
