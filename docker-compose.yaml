@@ -4,8 +4,6 @@ services:
     build: ./mongodb
     image: imranjoindevops/mongodb:v1 # docker build -t imranjoindevops/mongodb:v1  
     container_name: mongodb # docker run -d --network roboshop imranjoindevops/mongodb:v1
-    volumes:
-    - mongodb:/data/db # mongodb stores data in /data/db directory
   catalogue:
     build: ./catalogue
     image: imranjoindevops/catalogue:v1
@@ -99,5 +97,3 @@ networks:
     name: roboshop
     driver: bridge
     external: false # if true it should be created manually, if false docker creates this network
-volumes:
-  mongodb:
