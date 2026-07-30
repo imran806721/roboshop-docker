@@ -21,7 +21,7 @@ services:
     - user
     - cart
     - shipping
-  #   - payment
+    - payment
   user:
     build: ./user
     image: imranjoindevops/user:v1
