@@ -7,13 +7,13 @@ services:
   catalogue:
     build: ./catalogue
     image: imranjoindevops/catalogue:v1
-    container_name: catalogue1
+    container_name: catalogue
     depends_on:
     - mongodb
   frontend:
     build: ./frontend
     image: imranjoindevops/frontend:v1
-    container_name: frontend1
+    container_name: frontend
     ports:
     - "80:80"
     depends_on:
@@ -96,4 +96,4 @@ networks:
   default: # this means all the services in this file use this network
     name: roboshop
     driver: bridge
-    external: false # if true it should be created manually, if false docker creates this network
+    external: true # if true it should be created manually, if false docker creates this network
