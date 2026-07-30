@@ -7,7 +7,7 @@ services:
   catalogue:
     build: ./catalogue
     image: imranjoindevops/catalogue:v1
-    container_name: catalogue
+    container_name: catalogue1
     depends_on:
     - mongodb
   frontend:
