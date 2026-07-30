@@ -13,7 +13,7 @@ services:
   frontend:
     build: ./frontend
     image: imranjoindevops/frontend:v1
-    container_name: frontend
+    container_name: frontend1
     ports:
     - "80:80"
     depends_on:
