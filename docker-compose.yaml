@@ -19,7 +19,7 @@ services:
     depends_on:
     - catalogue
     - user
-  #   - cart
+    - cart
   #   - shipping
   #   - payment
   user:
@@ -44,16 +44,16 @@ services:
     depends_on:
     - redis
     - catalogue
-  # shipping:
-  #   build: ./shipping
-  #   image: imranjoindevops/shipping:v1
-  #   container_name: shipping
-  #   environment:
-  #     CART_ENDPOINT: "cart:8080"
-  #     DB_HOST: mysql
-  #   depends_on:
-  #   - mysql
-  #   - cart
+  shipping:
+    build: ./shipping
+    image: imranjoindevops/shipping:v1
+    container_name: shipping
+    environment:
+      CART_ENDPOINT: "cart:8080"
+      DB_HOST: mysql
+    depends_on:
+    - mysql
+    - cart
   # payment:
   #   build: ./payment
   #   image: imranjoindevops/payment:v1
@@ -81,7 +81,7 @@ services:
     container_name: mysql
     #command: --mysql-native-password=ON --innodb-lock_wait_timeout=120
     environment:
-       MYSQL_ROOT_PASSWORD: "RoboShop@1"
+        MYSQL_ROOT_PASSWORD: "RoboShop@1"
   #   volumes:
   #   - mysql:/var/lib/mysql 
   # rabbitmq:
